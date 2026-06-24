@@ -17,5 +17,6 @@
     greybird                
     papirus-icon-theme      
     nerd-fonts.jetbrains-mono
+    nerd-fonts.adwaita-mono
   ];
 }
