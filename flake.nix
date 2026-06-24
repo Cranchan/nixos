@@ -14,7 +14,7 @@
 			./modules/configuration.nix
 			./modules/packages.nix
 			./modules/desktop/xfce.nix
-			./modules/zsh.nix
+			#./modules/zsh.nix
 			./modules/fastfetch.nix
         ];
       };
