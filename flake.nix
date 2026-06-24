@@ -13,8 +13,13 @@
 			./modules/hardware-configuration.nix
 			./modules/configuration.nix
 			./modules/packages.nix
-			./modules/desktop/xfce.nix
-			#./modules/zsh.nix
+
+			# enable for gnome desktop
+			./modules/desktop/gnome.nix
+
+			# enable for xfce desktop
+			#./modules/desktop/xfce.nix
+			./modules/zsh.nix
 			./modules/fastfetch.nix
         ];
       };
