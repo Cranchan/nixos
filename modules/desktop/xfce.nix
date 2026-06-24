@@ -8,12 +8,12 @@
   environment.xfce.excludePackages = with pkgs; [ ];
 
   environment.systemPackages = with pkgs; [
-    xfce.thunar             
-    xfce.xfce4-terminal     
-    xfce.mousepad           
-    xfce.ristretto          
-    xfce.xfce4-pulseaudio-plugin 
-    xfce.xfce4-whiskermenu-plugin 
+    thunar             
+    xfce4-terminal     
+    mousepad           
+    ristretto          
+    xfce4-pulseaudio-plugin 
+    xfce4-whiskermenu-plugin 
     greybird                
     papirus-icon-theme      
     nerd-fonts.jetbrains-mono
