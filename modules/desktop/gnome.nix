@@ -28,7 +28,7 @@ environment.systemPackages = with pkgs; [
     
     # Icons
     papirus-icon-theme
-
+	adwaita-icon-theme
     # Fonts
     nerd-fonts.adwaita-mono
     
