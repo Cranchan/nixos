@@ -29,7 +29,7 @@
         }
       ];
 
-      initContent = ''
+      initExtra = ''
         source ${../assets/p10k.zsh}
       '';
     };

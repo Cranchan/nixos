@@ -19,7 +19,6 @@
     # Gnome Software
     ptyxis
     nautilus
-    rewaita
     gnome-tweaks
     gedit        
     
@@ -39,8 +38,6 @@
 
   # --- User-Level Home Manager Settings ---
   home-manager.users.cranchan = { ... }: {
-    home.stateVersion = "26.05";
-
     dconf.settings = {
       # 1. Background Wallpapers
       "org/gnome/desktop/background" = {

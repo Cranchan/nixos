@@ -71,6 +71,6 @@
 	  gst_all_1.gst-plugins-ugly
 	  gst_all_1.gst-libav
 ];
-  system.stateVersion = "26.05";
+  system.stateVersion = "24.11";
 
 }

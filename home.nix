@@ -4,16 +4,16 @@
 
   # Do not change this value unless you have read the changelog of a newer version.
   # It controls state version compatibility.
-  home.stateVersion = "26.05"; 
+  home.stateVersion = "24.11";
 	
 	imports = [
   	./modules/fastfetch.nix
   ];
     
-  programs.git.settings = {
+  programs.git = {
     enable = true;
-    user.name = "cranchan";
-    user.email = "klusignolo54@gmail.com";
+    userName = "cranchan";
+    userEmail = "klusignolo54@gmail.com";
   };
   
   programs.home-manager.enable = true;
