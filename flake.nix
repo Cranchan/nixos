@@ -10,17 +10,12 @@
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-			./modules/hardware-configuration.nix
-			./modules/configuration.nix
+			./modules/hosts/t14/hardware-configuration.nix
+			./modules/hosts/t14/configuration.nix
 			./modules/packages.nix
 			./modules/zsh.nix
 			./modules/fastfetch.nix
-
-			# enable for gnome desktop
-			./modules/desktop/gnome.nix
-
-			# enable for xfce desktop
-			#./modules/desktop/xfce.nix
+			./modules/gnome.nix
 
         ];
       };
