@@ -9,6 +9,7 @@
    
     # CLI applications
     micro
+    helix
     btop
     curl
     wget
