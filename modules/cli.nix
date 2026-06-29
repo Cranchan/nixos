@@ -20,8 +20,8 @@
 
     programs.git = {
       enable = true;
-      userName = user;
-      userEmail = email;
+      user.Name = user;
+      user.Email = email;
     };
 
     programs.home-manager.enable = true;
