@@ -20,13 +20,15 @@
 
     programs.git = {
       enable = true;
-<<<<<<< HEAD
-      user.Name = user;
-      user.Email = email;
-=======
+
+      # Home Manager standard shortcuts (cleaner and native)
       settings.user.Name = user;
       settings.user.Email = email;
->>>>>>> fc39591 (fixed deprecated git user and email definitions)
+
+      # Extra raw git config options go here cleanly
+      settings = {
+        init.defaultBranch = "main"; 
+      };
     };
 
     programs.home-manager.enable = true;
