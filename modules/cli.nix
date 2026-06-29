@@ -20,8 +20,13 @@
 
     programs.git = {
       enable = true;
+<<<<<<< HEAD
       user.Name = user;
       user.Email = email;
+=======
+      settings.user.Name = user;
+      settings.user.Email = email;
+>>>>>>> fc39591 (fixed deprecated git user and email definitions)
     };
 
     programs.home-manager.enable = true;
