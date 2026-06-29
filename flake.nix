@@ -10,26 +10,32 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    let
+      user = "cranchan";
+      email = "klusignolo54@gmail.com";
+    in
+    {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit user email; };
         modules = [
           ./hosts/t14/hardware-configuration.nix
           ./hosts/t14/configuration.nix
-          ./modules/packages.nix
+          ./modules/cli.nix
+          ./modules/shell.nix
           ./modules/gnome.nix
-          ./modules/zsh.nix
+          ./modules/gaming.nix
+          ./modules/virtualization.nix
+          ./modules/apps.nix
           
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            
-            home-manager.users.cranchan = {
-              imports = [ ./home.nix ];
-            };
+            home-manager.extraSpecialArgs = { inherit user email; };
           }
         ];
       };

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, user, ... }:
 {
 
   # Bootloader.
@@ -54,7 +54,7 @@
 
   };
 
-  users.users."cranchan" = {
+  users.users.${user} = {
     isNormalUser = true;
     description = "Dawn";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -70,7 +70,7 @@
 	  gst_all_1.gst-plugins-bad
 	  gst_all_1.gst-plugins-ugly
 	  gst_all_1.gst-libav
-];
+  ];
   system.stateVersion = "26.05";
 
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, user, ... }:
 
 {
   # --- System-Level GNOME Core Settings ---
@@ -39,9 +39,7 @@
   ];
 
   # --- User-Level Home Manager Settings ---
-  home-manager.users.cranchan = { ... }: {
-    home.stateVersion = "26.05";
-
+  home-manager.users.${user} = { ... }: {
     dconf.settings = {
       # 1. Background Wallpapers
       "org/gnome/desktop/background" = {
