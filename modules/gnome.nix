@@ -36,6 +36,7 @@
     gnomeExtensions.middle-click-to-close-in-overview
     gnomeExtensions.user-themes
     gnomeExtensions.caffeine
+    
   ];
 
   # --- User-Level Home Manager Settings ---

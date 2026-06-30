@@ -8,7 +8,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "t14"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable networking
@@ -63,6 +63,8 @@
     ];
   };
 	environment.systemPackages = with pkgs; [
+
+	#Multimedia Codecs
 	  ffmpeg-full
 	  gst_all_1.gstreamer
 	  gst_all_1.gst-plugins-base

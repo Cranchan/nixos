@@ -10,8 +10,6 @@
 
   # KVM / QEMU / Libvirt
   virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-
   users.users.${user}.extraGroups = [ "libvirtd" ];
 
   environment.systemPackages = with pkgs; [
