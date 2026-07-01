@@ -1,7 +1,7 @@
 { config, pkgs, user, ... }:
 {
 
-	nixpkgs.config.permittedInsecurePackages = [
+  nixpkgs.config.permittedInsecurePackages = [
     "pnpm-10.29.2"
   ];
 
@@ -55,28 +55,35 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-
   };
+
+  # Hardware support for RTL-SDR (handles driver blacklisting and udev rules)
+  hardware.rtl-sdr.enable = true;
 
   users.users.${user} = {
     isNormalUser = true;
     description = "Dawn";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" ];
     packages = with pkgs; [
 
     ];
   };
-	environment.systemPackages = with pkgs; [
 
-	#Multimedia Codecs
-	  ffmpeg-full
-	  gst_all_1.gstreamer
-	  gst_all_1.gst-plugins-base
-	  gst_all_1.gst-plugins-good
-	  gst_all_1.gst-plugins-bad
-	  gst_all_1.gst-plugins-ugly
-	  gst_all_1.gst-libav
+  environment.systemPackages = with pkgs; [
+    # Multimedia Codecs
+    ffmpeg-full
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gst-libav
+
+    # SDR Tools
+    rtl-sdr
+    gqrx
   ];
+
   system.stateVersion = "26.05";
 
 }
