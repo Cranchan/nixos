@@ -4,6 +4,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    # CLI Tools
     micro
     btop
     curl
@@ -11,6 +12,26 @@
     git
     tmux
     catimg
+
+    # GUI System Apps (GNOME)
+    ptyxis
+    nautilus
+    gnome-tweaks
+    gedit
+
+    # Icons
+    papirus-icon-theme
+    adwaita-icon-theme
+
+    # Fonts
+    nerd-fonts.adwaita-mono
+
+    # Gnome extensions
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.middle-click-to-close-in-overview
+    gnomeExtensions.user-themes
+    gnomeExtensions.caffeine
   ];
 
   home-manager.users.${user} = {

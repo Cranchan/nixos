@@ -15,30 +15,6 @@
     xterm
   ];
 
-  environment.systemPackages = with pkgs; [
-    # Gnome Software
-    ptyxis
-    nautilus
-    gnome-tweaks
-    gedit 
-    gnome-text-editor       
-    
-    # Icons
-    papirus-icon-theme
-    adwaita-icon-theme
-
-    # Fonts
-    nerd-fonts.adwaita-mono
-    
-    # Gnome extensions
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.middle-click-to-close-in-overview
-    gnomeExtensions.user-themes
-    gnomeExtensions.caffeine
-    
-  ];
-
   # --- User-Level Home Manager Settings ---
   home-manager.users.${user} = { ... }: {
     dconf.settings = {

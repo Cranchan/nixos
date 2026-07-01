@@ -25,12 +25,11 @@
         modules = [
           ./hosts/t14/hardware-configuration.nix
           ./hosts/t14/configuration.nix
-          ./modules/cli.nix
+          ./modules/pkgs.nix
           ./modules/shell.nix
           ./modules/gnome.nix
           ./modules/gaming.nix
           ./modules/virtualization.nix
-          ./modules/apps.nix
           ./modules/flatpak.nix
           
           nix-flatpak.nixosModules.nix-flatpak
