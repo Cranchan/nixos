@@ -19,7 +19,7 @@
     in
     {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      t14 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit user email; };
         modules = [

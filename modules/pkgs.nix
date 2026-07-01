@@ -4,7 +4,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-
+		
+		# Desktop Apps
 		spotify
 		vesktop
 

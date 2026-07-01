@@ -18,8 +18,5 @@
       "com.adamcake.Bolt"
       "com.github.tchx84.Flatseal"
     ];
-    overrides = {
-      "com.spotify.Client".Context.sockets = [ "x11" "!wayland" "!fallback-x11" ];
     };
-  };
-}
+  }
